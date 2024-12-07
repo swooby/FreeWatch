@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "FreeWatch",
+    "version": "0.1",
+    "description": "FreeWatch monitors your Amazon Prime Video Watchlist and notifies you when items become 'Included with Prime' for free streaming.",
+    "permissions": ["activeTab", "storage"],
+    "host_permissions": ["https://www.amazon.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+            "https://www.amazon.com/gp/video/mystuff*",
+            "https://amazon.com/gp/video/mystuff*"
+          ],
+          "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "FreeWatch.png",
+        "48": "FreeWatch.png",
+        "128": "FreeWatch.png"
+      }
+    },
+    "icons": {
+      "16": "FreeWatch.png",
+      "48": "FreeWatch.png",
+      "128": "FreeWatch.png"
+    }
+  }
