@@ -4,8 +4,10 @@ Chrome Extension to easily identify "Included With Prime" and "Leaves Prime In X
 
 * "Included With Prime" videos are highlighted in green.
 * Non-"Included With Prime" videos are subtly dimmed.
-* "Leaves Prime In X Days" will highlight red when hovered over.
+* "Leaves Prime In X Days" will highlight red **when hovered over**.
 * Observes the html DOM for dynamic loads as the page is scrolled.
+
+<img width="1030" alt="image" src="https://github.com/user-attachments/assets/e7ae2cc2-57f3-45c6-91a3-772c82886a2f">
 
 **You will need to often manually refresh the page (Control/Command-R).**
 
@@ -15,14 +17,17 @@ Feel free to contribute to this extension to improve it and/or support other bro
 
 # Background
 
-I have always found it more difficult than necessary to easily distingush "Included With Prime" videos from videos that have to be paid for; Amazon's little yellow shopping cart icon is by itself fairly obvious and easy to spot, but I find that it just becomes noise in a sea of video thumbnails.  
-I have also found it easy to miss videos that are "Leaving Prime In X Days".  
-I looked for and did not find any existing extension to highlight Free and Expiring videos.  
-So I wrote this my own personal use case.
+I have always found it more difficult than necessary to easily distingush "Included With Prime" videos from videos that have to be paid for; Amazon's little yellow shopping cart icon, <img width="28" alt="image" src="https://github.com/user-attachments/assets/67c64772-0836-49b7-82bb-38f724c6cafa">, is **by itself** fairly obvious and easy to spot, but **in a sea of video thumbnails it just becomes noise**.
+
+I have also found it easy to miss videos that are "Leaving Prime In X Days".
+
+I looked for and did not find any existing extension to highlight Free or Expiring videos.
+
+So I wrote this extension initially for my own personal use case.
 
 ## Details
 
-The html of the https://amazon.com/gp/video/mystuff pages is pretty huge and messy, but it is overall not too complicated.
+The html of the (view-source:https://www.amazon.com/gp/video/mystuff/watchlist)[https://amazon.com/gp/video/mystuff] pages is pretty huge and messy, but it is overall not too complicated.
 
 The main root for the list of videos is all of the `<article ... data-testid="card">` elements under the `<div data-testid="grid-mini-details-controller">` element.  
 
